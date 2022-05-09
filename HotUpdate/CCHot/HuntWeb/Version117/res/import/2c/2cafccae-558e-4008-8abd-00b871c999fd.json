@@ -1,0 +1,1 @@
+{"__type__":"cc.AnimationClip","_name":"itemDrop2","_duration":1,"curveData":{"props":{"scale":[{"frame":0,"value":{"__type__":"cc.Vec2","x":0.2,"y":0.2}},{"frame":1,"value":{"__type__":"cc.Vec2","x":1,"y":1}}]}}}

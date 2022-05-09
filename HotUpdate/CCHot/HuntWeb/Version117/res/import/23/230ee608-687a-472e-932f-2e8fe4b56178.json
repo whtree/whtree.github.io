@@ -1,0 +1,1 @@
+{"__type__":"cc.AnimationClip","_name":"upStarNode","_duration":0.3333333333333333,"curveData":{"paths":{"upStarNodeRight":{"props":{"x":[{"frame":0,"value":398.416},{"frame":0.3333333333333333,"value":248.416}]}},"upStarNodeLeft":{"props":{"x":[{"frame":0,"value":-399.545},{"frame":0.3333333333333333,"value":-249.545}]}}}}}
