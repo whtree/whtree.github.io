@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit">
+
+  
+  <title>JS 基础 | 博客</title>
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="alternate" href="/atom.xml" title="博客" type="application/atom+xml">
+  <meta name="description" content="NOTESjs 基础 所有的数字类型,在JavaScript中,都是双倍精度的浮点数类型  Javascript的数字类型是双精度浮点型.  在Javascript中,整型是double的一个子集,而不是一个独立的数据类型.  Javascript在进行位运算的时候会把数字转换成32位整型来进行处理.  浮点数运算是不准确的,拥有许多的局限性.  javaScript最大值为2的53次方&amp;#x3D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS 基础">
+<meta property="og:url" content="http://example.com/2023/07/11/JS_Base/JS/index.html">
+<meta property="og:site_name" content="博客">
+<meta property="og:description" content="NOTESjs 基础 所有的数字类型,在JavaScript中,都是双倍精度的浮点数类型  Javascript的数字类型是双精度浮点型.  在Javascript中,整型是double的一个子集,而不是一个独立的数据类型.  Javascript在进行位运算的时候会把数字转换成32位整型来进行处理.  浮点数运算是不准确的,拥有许多的局限性.  javaScript最大值为2的53次方&amp;#x3D">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-07-11T13:29:32.000Z">
+<meta property="article:modified_time" content="2023-07-11T14:11:38.751Z">
+<meta property="article:author" content="Tree">
+<meta property="article:tag" content="技术 语言">
+<meta name="twitter:card" content="summary">
+
+  <meta name="keywords" content=",技术 语言">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="theme-color" content="#9C27B0">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="博客">
+  <meta name="msapplication-starturl" content="http://example.com/2023/07/11/JS_Base/JS/">
+  <meta name="msapplication-navbutton-color" content="#9C27B0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="博客">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+
+  
+    <link rel="canonical" href="http://example.com/2023/07/11/JS_Base/JS/">
+  
+
+  
+  
+
+  
+  
+  
+
+  
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/custom.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink">
+  <script>var a=localStorage.getItem("mdui-theme-layout-dark");if(a){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(!a){document.getElementsByTagName("body")[0].className+=" mdui-drawer-body-left"};</script>
+  <header id="header" class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-appbar-inset">
+  <div class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">博客</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'Search'}"><i class="mdui-icon material-icons">search</i></a>
+    <a href="/atom.xml" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'RSS'}"><i class="mdui-icon material-icons">rss_feed</i></a>
+  </div>
+</header>
+<div class="mdui-dialog" id="search">
+  
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="请输入关键字"><input type="hidden" name="sitesearch" value="http://example.com"></form>
+    <div class="search-result"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer mdui-drawer-full-height">
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(a){document.getElementById("sidebar").className+=" mdui-drawer-close"};</script>
+  <div class="mdui-grid-tile">
+    <img src="/images/banner.png" style="height: 160px;">
+    <img src="/images/avatar.png" class="avatar-animation" style="position: absolute; top: 10%; left: 24px; width: 64px; height: 64px; border: 2px solid #fff; border-radius: 50%;">
+    <div class="mdui-grid-tile-actions">
+      <div class="mdui-grid-tile-text">
+        <div class="mdui-grid-tile-title">Tree</div>
+        <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">art_track</i></div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    <a href="/" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
+      <div class="mdui-list-item-content">Home</div>
+    </a>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-0");if(a){document.getElementsByClassName("mdui-collapse-item")[0].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">archive</i>
+        <div class="mdui-list-item-content">Archive</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/archives/2023/07/">July 2023<span class="mdui-ripple sidebar_archives-count">4</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-1");if(a){document.getElementsByClassName("mdui-collapse-item")[1].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">class</i>
+        <div class="mdui-list-item-content">Category</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/categories/JS-Base/">JS Base<span class="mdui-ripple sidebar_archives-count">3</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E6%B8%B8%E6%88%8F%E4%BC%98%E5%8C%96/">游戏优化<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-2");if(a){document.getElementsByClassName("mdui-collapse-item")[2].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-brown">bookmark</i>
+        <div class="mdui-list-item-content">Tag</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/tags/drawcall/" rel="tag">drawcall<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E6%8A%80%E6%9C%AF-%E8%AF%AD%E8%A8%80/" rel="tag">技术 语言<span class="mdui-ripple sidebar_archives-count">3</span></a>
+        
+      </div>
+    </div>
+    <a href="/about" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">person</i>
+      <div class="mdui-list-item-content">About</div>
+    </a>
+  </div>
+
+  <div class="mdui-divider"></div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    
+      <a href="/timeline" class="mdui-list-item mdui-ripple">时间轴</a>
+    
+      <a href="/tagcloud" class="mdui-list-item mdui-ripple">标签云</a>
+    
+      <a href="/gallery" class="mdui-list-item mdui-ripple">相册</a>
+    
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-3");if(a){document.getElementsByClassName("mdui-collapse-item")[3].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-content">Links</div>
+        <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        
+          <a href="javascript:;" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme mdui-ripple" style="justify-content: center;">No Links</a>
+        
+      </div>
+    </div>
+  </div>
+</aside>
+
+  <main id="main" class="mdui-m-t-5 fadeIn animated">
+  
+<link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-6.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">JS 基础</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2023-07-11 / <i class="iconfont">&#xe601;</i> Tree</div>
+        </div>
+      </div>
+      <div class="mdui-card-menu">
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#qrcode', align: 'right'}"><i class="mdui-icon material-icons">devices</i></button>
+          <ul class="mdui-menu" id="qrcode">
+            
+              <li class="mdui-menu-item"><a class="mdui-text-center mdui-ripple">发送到手机</a></li>
+            
+            <li class="mdui-menu-item" disabled>
+              
+                <img src="//chart.googleapis.com/chart?cht=qr&chs=246x246&chl=http://example.com/2023/07/11/JS_Base/JS/&chld=M|2">
+              
+            </li>
+          </ul>
+        
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+          <ul class="mdui-menu" id="share_menu">
+            <li class="mdui-menu-item">
+              <a href="https://service.weibo.com/share/share.php?appkey=&title=JS 基础&url=http://example.com/2023/07/11/JS_Base/JS/&pic=http://example.com/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://twitter.com/intent/tweet?text=JS 基础&url=http://example.com/2023/07/11/JS_Base/JS/&via=Tree" target="_blank" class="mdui-ripple">Share to Twitter</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2023/07/11/JS_Base/JS/" target="_blank" class="mdui-ripple">Share to Facebook</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://plus.google.com/share?url=http://example.com/2023/07/11/JS_Base/JS/" target="_blank" class="mdui-ripple">Share to Google+</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/2023/07/11/JS_Base/JS/&title=JS 基础" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://connect.qq.com/widget/shareqq/index.html?site=博客&title=JS 基础&pics=http://example.com/images/favicon.png&url=http://example.com/2023/07/11/JS_Base/JS/" target="_blank" class="mdui-ripple">Share to QQ</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://telegram.me/share/url?url=http://example.com/2023/07/11/JS_Base/JS/&text=JS 基础" target="_blank" class="mdui-ripple">Share to Telegram</a>
+            </li>
+          </ul>
+        
+      </div>
+    </header>
+    <div class="mdui-card-content mdui-typo">
+      <h1 id="NOTES"><a href="#NOTES" class="headerlink" title="NOTES"></a>NOTES</h1><h1 id="js-基础"><a href="#js-基础" class="headerlink" title="js 基础"></a>js 基础</h1><ul>
+<li><p>所有的数字类型,在<code>JavaScript</code>中,都是双倍精度的浮点数类型</p>
+</li>
+<li><p><code>Javascript</code>的数字类型是双精度浮点型.</p>
+</li>
+<li><p>在<code>Javascript</code>中,整型是<code>double</code>的一个子集,而不是一个独立的数据类型.</p>
+</li>
+<li><p><code>Javascript</code>在进行位运算的时候会把数字转换成32位整型来进行处理.</p>
+</li>
+<li><p>浮点数运算是不准确的,拥有许多的局限性.</p>
+</li>
+<li><p><code>javaScript</code>最大值为2的53次方&#x3D;&#x3D;&#x3D;9007199254740992。</p>
+</li>
+</ul>
+<h2 id="‘-’-与-‘-’"><a href="#‘-’-与-‘-’" class="headerlink" title="‘|’ 与 ‘||’"></a>‘|’ 与 ‘||’</h2><h3 id="JS-单竖线运算符"><a href="#JS-单竖线运算符" class="headerlink" title="JS 单竖线运算符"></a>JS 单竖线运算符</h3><p>在<code>js</code>开发应用中我们通常会碰到<code>&#39;|&#39;</code>与<code>&#39;||&#39;</code>了，那么在运算中<code>&#39;|&#39;</code>与<code>&#39;||&#39;</code>是什么意思呢？<br>在<code>js</code>整数操作的时候，相当于去除小数点，<code>parseInt</code>。在正数的时候相当于<code>Math.floor()</code>,负数的时候相当于<code>Math.ceil()</code>  </p>
+<p>注：</p>
+<ol>
+<li>Math.ceil()用作向上取整。</li>
+<li>Math.floor()用作向下取整。</li>
+<li>Math.round() 我们数学中常用到的四舍五入取整。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">0.6</span>|<span class="number">0</span>)<span class="comment">//0</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1.1</span>|<span class="number">0</span>)<span class="comment">//1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3.65555</span>|<span class="number">0</span>)<span class="comment">//3</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">5.99999</span>|<span class="number">0</span>)<span class="comment">//5</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(-<span class="number">7.777</span>|<span class="number">0</span>)<span class="comment">//-7</span></span><br></pre></td></tr></table></figure>
+单竖杠的运算规则</li>
+</ol>
+<p>看了上面的例子，大体知道单竖杠可以进行取整运算，就是只保留正数部分，小数部分通过拿掉，但是<code>&#39;|0&#39;</code>，又是如何进行运算的呢，为什么能<code>&#39;|0&#39;</code>能达到取整的目的呢？单竖杠不是<code>0</code>有会是多少呢？</p>
+<p>带着这些问题，我们看下面例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>|<span class="number">4</span>);<span class="comment">//7</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">4</span>|<span class="number">4</span>);<span class="comment">//4</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">8</span>|<span class="number">3</span>);<span class="comment">//11</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">5.3</span>|<span class="number">4.1</span>);<span class="comment">//5</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">9</span>|<span class="number">3455</span>);<span class="comment">//3455</span></span><br></pre></td></tr></table></figure>
+<p>这里面提到了单竖杠<code>&#39;|&#39;</code>但是没有<code>javascript</code>的。<br>好吧，我在这里公布答案吧。其实单竖杠<code>&#39;|&#39;</code>就是转换为<code>2进制</code>之后相加得到的结果。例如我们拿简单的举例：</p>
+<p>3|4<br>转换为二进制之后011|100  相加得到111&#x3D;7<br>4|4<br>转换为二进制之后100 |100  相加得到100&#x3D;4<br>8|3<br>转换为二进制之后1000 |011  相加得到1011&#x3D;11</p>
+<p>以此类推，我在这里就不一一列举了，单竖杠<code>&#39;|&#39;</code>运算就是转换为2进制之后相加得到的结果！</p>
+<h3 id="JS-双竖线运算符"><a href="#JS-双竖线运算符" class="headerlink" title="JS 双竖线运算符"></a>JS 双竖线运算符</h3><p>1、JS双竖线运算符:是或比较.如<code>null||&#39;1&#39;</code>,返回<code>&#39;1&#39;</code>;<code>&#39;2&#39;||&#39;1&#39;</code>,返回<code>&#39;2&#39;</code>.即或运算符中,第一个为真,后面的就不用计算了.所以得<code>&#39;2&#39;</code>。<br>2、js 中 使用双竖线运算符<code>&quot;||&quot;</code>,返回第一个有效值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> objOne = <span class="literal">undefined</span> || <span class="number">1</span> || <span class="literal">null</span> || <span class="keyword">new</span> <span class="title class_">Date</span>(); </span><br><span class="line"><span class="keyword">var</span> objTwo = <span class="keyword">new</span> <span class="title class_">Date</span>(); </span><br><span class="line"><span class="keyword">var</span> objThree = objOne || objTwo; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(objThree.<span class="title function_">toString</span>()); <span class="comment">//out put &quot;1&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>性能上的比较</p>
+</li>
+<li><p>逻辑运算符<code>&amp;&amp; ||</code> 中，如果&amp;&amp;的第一个运算数是<code>false</code>，就不再考虑第二个运算数，直接返回<code>false</code>；如果<code>||</code>的第一个运算数是<code>true</code>，也不再考虑第二个运算数，直接返回<code>true</code>。而<code>&amp;</code>和<code>|</code>运算符却不是这样的，它们总是要比较两个运算数才得出结果，因而性能上<code>&amp;&amp;</code>和<code>||</code>会比<code>&amp;</code>和<code>|</code>好。</p>
+</li>
+</ul>
+<p>功能用法</p>
+<p><code>&amp;&amp;</code>和<code>||</code>只能进行逻辑运算，而<code>&amp;</code>和<code>|</code>除了可以进行”逻辑运算”外，还可以进行位运算</p>
+<p>位运算</p>
+<p><code>&amp;</code>和<code>|</code>本是位运算符，之所以可以进行”逻辑运算”，是由于<code>JS</code>是无类型的语言、各数据类型可以自由转换这一特性决定的，当用<code>&amp;</code>和<code>|</code>进行”逻辑运算”时，实际上<code>true</code>被转换成<code>1</code>，<code>false</code>被转换成<code>0</code>，再进行逐位运算：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">true</span> &amp; <span class="literal">false</span>); <span class="comment">//JS，结果为0</span></span><br><span class="line"><span class="comment">// 上面这句，实例等同于逻辑运算被转化成下面的位运算，并执行：</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span> &amp; <span class="number">0</span>); <span class="comment">//JS，结果为0</span></span><br><span class="line"><span class="comment">// 也正是由于&amp;和|是逐位运算符，才出现了第一点中所说的，它们总是要比较两个运算数才得出结果，才导致性能会比&amp;&amp;和||低一些。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="eval"><a href="#eval" class="headerlink" title="eval"></a>eval</h2><ul>
+<li><p><strong><code>eval</code>可以将字符串生成语句执行，</strong> 和<code>SQL</code>的<code>exec()</code>类似。</p>
+</li>
+<li><p><code>eval</code>的使用场合是什么呢？有时候我们预先不知道要执行什么语句，只有 当条件和参数给时才知道执行什么语句，这时候<code>eval</code>就派上用场了。举个例子：</p>
+</li>
+<li><p>我们要做一个<code>function()</code>，功能是输入网页中两个个对象的名称，然后程序就将这两个对象的值联接起来输出。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">output</span>(<span class="params">a,b</span>)&#123;</span><br><span class="line">   <span class="keyword">var</span> tmpa,tmpb;</span><br><span class="line">   tmpa=<span class="variable language_">document</span>.<span class="property">all</span>.<span class="property">a</span>.<span class="property">value</span>;</span><br><span class="line">   tmpb=<span class="variable language_">document</span>.<span class="property">all</span>.<span class="property">b</span>.<span class="property">value</span>;</span><br><span class="line">   <span class="variable language_">document</span>.<span class="title function_">write</span>(tmpa+tmpb);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">output</span>(<span class="string">&#x27;input1&#x27;</span>,<span class="string">&#x27;input2&#x27;</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这样你执行的时候就会提示错误<code>“document.all.a</code>不是对象”以及<code>“document.all.b</code>不是对象”。原来<code>javascript</code>把<code>a</code>和 <code>b</code>当成对象名称了，怎样能让<code>javascript</code>把<code>a</code>里面的值作为对象名称呢<code>？</code>这时候就要用<code>eval</code>了，把代码改成这样：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">output</span>(<span class="params">a,b</span>)&#123;</span><br><span class="line"><span class="keyword">var</span> tmpa,tmpb;</span><br><span class="line">tmpa=<span class="built_in">eval</span>(<span class="string">&quot;document.all.&quot;</span>+a+<span class="string">&quot;.value&quot;</span>);</span><br><span class="line">tmpb=<span class="built_in">eval</span>(<span class="string">&quot;document.all.&quot;</span>+b+<span class="string">&quot;.value&quot;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(tmpa+tmpb);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">output</span>(<span class="string">&#x27;input1&#x27;</span>,<span class="string">&#x27;input2&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>这样<code>javascript</code>就会先取出<code>a,b</code>的值，然后和前面的<code>document.all.</code>以及后面的<code>.value</code>组合运行，于是就可以顺利取出<code>input1</code>和<code>input2</code>的值.</p>
+</li>
+</ul>
+<p><a href="https://www.cnblogs.com/shitianzeng/articles/2320164.html">参考</a></p>
+<h2 id="JS截取字符串"><a href="#JS截取字符串" class="headerlink" title="JS截取字符串"></a>JS截取字符串</h2><ol>
+<li><code>substring</code><br><code>string.substring(from, to)</code> 方法从 <code>from</code> 位置截取到 <code>to</code> 位置，<code>to</code> 可选，没有设置时默认到末尾。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">&quot;www.runoob.com!&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">substring</span>(<span class="number">4</span>)); <span class="comment">// 从第 5 个字符开始截取到末尾</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">substring</span>(<span class="number">4</span>,<span class="number">10</span>)); <span class="comment">// 从第 5 个字符开始截取到第10个字符</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><code>substr</code><br><code>substr</code>方法可在字符串中截取从开始下标开始的指定数目的字符。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">&quot;www.runoob.com!&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">substr</span>(<span class="number">4</span>,<span class="number">6</span>)); <span class="comment">// 从第 4 个字符开始截取6个字符</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><code>slice</code><br><code>slice(start,end)</code> 方法用于提取字符串的某个部分（从参数 <code>start</code> 到 <code>end </code>位置），并以新的字符串返回被提取的部分。类似 <code>substring</code>()。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">&quot;www.runoob.com!&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">slice</span>(<span class="number">4</span>)); <span class="comment">// 从第 5 个字符开始截取到末尾</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">slice</span>(<span class="number">4</span>,<span class="number">10</span>)); <span class="comment">// 从第 5 个字符开始截取到第10个字符</span></span><br></pre></td></tr></table></figure>
+
+
+      
+      <blockquote>
+        
+        <strong>PermaLink: </strong><br><a href="http://example.com/2023/07/11/JS_Base/JS/">http://example.com/2023/07/11/JS_Base/JS/</a>
+      </blockquote>
+    </div>
+    <footer class="mdui-card-actions">
+      
+        <a class="mdui-ripple article_categories-link" href="/categories/JS-Base/">JS Base</a>
+      
+      
+        <a class="mdui-ripple article_tags-link" href="/tags/%E6%8A%80%E6%9C%AF-%E8%AF%AD%E8%A8%80/" rel="tag">技术 语言</a>
+      
+    </footer>
+    
+  </article>
+  
+<script src="//cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
+
+
+  <nav id="paginator">
+    
+      <a rel="prev" class="extend prev" href="/2023/07/11/DrawCall/">
+        <button aria-label="prev" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_back</i></button>
+        <span class="mdui-p-x-3" mdui-tooltip="{content: 'DrawCall'}">Prev</span>
+      </a>
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/2023/07/11/JS_Base/for/">
+        <span class="mdui-p-x-3" mdui-tooltip="{content: 'for'}">Next</span>
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
+
+
+
+
+
+</main>
+  <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-0 mdui-text-center">
+    
+    
+    
+    
+    
+    
+    
+      <a href="https://github.com/whtree" target="_blank" class="mdui-btn mdui-btn-icon mdui-text-color-theme-a100"><i class="mdui-icon iconfont">&#xe7ab;</i></a>
+    
+    
+    
+    
+    
+    
+  </div>
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2023 Tree<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    
+  </div>
+</footer>
+
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_upward</i></button>
+  
+  
+<script src="/js/mdui.js"></script>
+<script src="/js/script.js"></script>
+
+  
+<script src="/custom.js"></script>
+
+</body>
+</html>

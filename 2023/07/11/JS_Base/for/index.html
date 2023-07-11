@@ -8,29 +8,30 @@
   <meta name="renderer" content="webkit">
 
   
-  <title>about | 博客</title>
+  <title>for | 博客</title>
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="博客" type="application/atom+xml">
-  <meta name="description" content="Tree Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://example.com/about/index.html">
+  <meta name="description" content="forfor in 与 for of 的区别？ 遍历对象   for…in 遍历对象的属性 for…of 用来遍历具有iterator接口的数据结构（set map arguments NodeList）   遍历数组   for…in 遍历的是数组的索引 for…of 遍历的是数组的值 forEach 不能使用break continue for…in for…of可以使用 for of 遍历对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="for">
+<meta property="og:url" content="http://example.com/2023/07/11/JS_Base/for/index.html">
 <meta property="og:site_name" content="博客">
-<meta property="og:description" content="Tree Blog">
+<meta property="og:description" content="forfor in 与 for of 的区别？ 遍历对象   for…in 遍历对象的属性 for…of 用来遍历具有iterator接口的数据结构（set map arguments NodeList）   遍历数组   for…in 遍历的是数组的索引 for…of 遍历的是数组的值 forEach 不能使用break continue for…in for…of可以使用 for of 遍历对">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-07-11T13:22:11.000Z">
-<meta property="article:modified_time" content="2023-07-11T13:55:53.458Z">
+<meta property="article:published_time" content="2023-07-11T13:29:32.000Z">
+<meta property="article:modified_time" content="2023-07-11T14:11:55.519Z">
 <meta property="article:author" content="Tree">
+<meta property="article:tag" content="技术 语言">
 <meta name="twitter:card" content="summary">
 
-  <meta name="keywords" content="">
+  <meta name="keywords" content=",技术 语言">
   <meta name="format-detection" content="telephone=no,email=no">
   <meta name="theme-color" content="#9C27B0">
 
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="博客">
-  <meta name="msapplication-starturl" content="http://example.com/about/">
+  <meta name="msapplication-starturl" content="http://example.com/2023/07/11/JS_Base/for/">
   <meta name="msapplication-navbutton-color" content="#9C27B0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="博客">
@@ -38,7 +39,7 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
 
   
-    <link rel="canonical" href="http://example.com/about/index.html">
+    <link rel="canonical" href="http://example.com/2023/07/11/JS_Base/for/">
   
 
   
@@ -175,10 +176,10 @@
   <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-15.png" style="max-height: 240px;">
+      <img src="/images/random/material-17.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
-          <div class="mdui-card-primary-title">about</div>
+          <div class="mdui-card-primary-title">for</div>
           <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2023-07-11 / <i class="iconfont">&#xe601;</i> Tree</div>
         </div>
       </div>
@@ -191,7 +192,7 @@
             
             <li class="mdui-menu-item" disabled>
               
-                <img src="//chart.googleapis.com/chart?cht=qr&chs=246x246&chl=http://example.com/about/index.html&chld=M|2">
+                <img src="//chart.googleapis.com/chart?cht=qr&chs=246x246&chl=http://example.com/2023/07/11/JS_Base/for/&chld=M|2">
               
             </li>
           </ul>
@@ -200,40 +201,70 @@
           <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
           <ul class="mdui-menu" id="share_menu">
             <li class="mdui-menu-item">
-              <a href="https://service.weibo.com/share/share.php?appkey=&title=about&url=http://example.com/about/index.html&pic=http://example.com/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+              <a href="https://service.weibo.com/share/share.php?appkey=&title=for&url=http://example.com/2023/07/11/JS_Base/for/&pic=http://example.com/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://twitter.com/intent/tweet?text=about&url=http://example.com/about/index.html&via=Tree" target="_blank" class="mdui-ripple">Share to Twitter</a>
+              <a href="https://twitter.com/intent/tweet?text=for&url=http://example.com/2023/07/11/JS_Base/for/&via=Tree" target="_blank" class="mdui-ripple">Share to Twitter</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/about/index.html" target="_blank" class="mdui-ripple">Share to Facebook</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2023/07/11/JS_Base/for/" target="_blank" class="mdui-ripple">Share to Facebook</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://plus.google.com/share?url=http://example.com/about/index.html" target="_blank" class="mdui-ripple">Share to Google+</a>
+              <a href="https://plus.google.com/share?url=http://example.com/2023/07/11/JS_Base/for/" target="_blank" class="mdui-ripple">Share to Google+</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/about/index.html&title=about" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/2023/07/11/JS_Base/for/&title=for" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://connect.qq.com/widget/shareqq/index.html?site=博客&title=about&pics=http://example.com/images/favicon.png&url=http://example.com/about/index.html" target="_blank" class="mdui-ripple">Share to QQ</a>
+              <a href="https://connect.qq.com/widget/shareqq/index.html?site=博客&title=for&pics=http://example.com/images/favicon.png&url=http://example.com/2023/07/11/JS_Base/for/" target="_blank" class="mdui-ripple">Share to QQ</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://telegram.me/share/url?url=http://example.com/about/index.html&text=about" target="_blank" class="mdui-ripple">Share to Telegram</a>
+              <a href="https://telegram.me/share/url?url=http://example.com/2023/07/11/JS_Base/for/&text=for" target="_blank" class="mdui-ripple">Share to Telegram</a>
             </li>
           </ul>
         
       </div>
     </header>
     <div class="mdui-card-content mdui-typo">
-      <h1 id="Tree-Blog"><a href="#Tree-Blog" class="headerlink" title="Tree Blog"></a>Tree Blog</h1>
+      <h1 id="for"><a href="#for" class="headerlink" title="for"></a>for</h1><h2 id="for-in-与-for-of-的区别？"><a href="#for-in-与-for-of-的区别？" class="headerlink" title="for in 与 for of 的区别？"></a>for in 与 for of 的区别？</h2><ul>
+<li>遍历对象</li>
+</ul>
+<ol>
+<li>for…in 遍历对象的属性</li>
+<li>for…of 用来遍历具有iterator接口的数据结构（set map arguments NodeList）</li>
+</ol>
+<ul>
+<li>遍历数组</li>
+</ul>
+<ol>
+<li>for…in 遍历的是数组的索引</li>
+<li>for…of 遍历的是数组的值</li>
+<li>forEach 不能使用break continue for…in for…of可以使用</li>
+<li>for of 遍历对象 Object.keys</li>
+<li>argument NodeList</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo2</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> iterator <span class="keyword">of</span> <span class="variable language_">arguments</span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(iterator);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">foo2</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="comment">// 1</span></span><br><span class="line"><span class="comment">// 2</span></span><br><span class="line"><span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>不能遍历 Symbol 属性<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">as</span> = <span class="title class_">Symbol</span>(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> bs = <span class="title class_">Symbol</span>(<span class="string">&#x27;b&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    [<span class="keyword">as</span>]: <span class="string">&#x27;as&#x27;</span>,</span><br><span class="line">    [bs]: <span class="string">&#x27;bs&#x27;</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;obj&#x27;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">23</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">    <span class="comment">// console.log(key);</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// name</span></span><br><span class="line"><span class="comment">// age</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 可以遍历Symbol的方法</span></span><br><span class="line"><span class="comment">// Object.getOwnPropertySymbols()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> objGetSymbol = <span class="title class_">Object</span>.<span class="title function_">getOwnPropertySymbols</span>(obj);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> key2 <span class="keyword">of</span> objGetSymbol) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(key2);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Symbol(a)</span></span><br><span class="line"><span class="comment">// Symbol(b)</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+<li>for in 主要是遍历对象</li>
+<li>for of 遍历具有iterator接口的数据结构</li>
+</ol>
+
       
       <blockquote>
         
-        <strong>PermaLink: </strong><br><a href="http://example.com/about/index.html">http://example.com/about/index.html</a>
+        <strong>PermaLink: </strong><br><a href="http://example.com/2023/07/11/JS_Base/for/">http://example.com/2023/07/11/JS_Base/for/</a>
       </blockquote>
     </div>
     <footer class="mdui-card-actions">
       
+        <a class="mdui-ripple article_categories-link" href="/categories/JS-Base/">JS Base</a>
+      
+      
+        <a class="mdui-ripple article_tags-link" href="/tags/%E6%8A%80%E6%9C%AF-%E8%AF%AD%E8%A8%80/" rel="tag">技术 语言</a>
       
     </footer>
     
@@ -244,6 +275,22 @@
 
   <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
 
+
+  <nav id="paginator">
+    
+      <a rel="prev" class="extend prev" href="/2023/07/11/JS_Base/JS/">
+        <button aria-label="prev" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_back</i></button>
+        <span class="mdui-p-x-3" mdui-tooltip="{content: 'JS 基础'}">Prev</span>
+      </a>
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/2023/07/11/JS_Base/isNumber/">
+        <span class="mdui-p-x-3" mdui-tooltip="{content: 'isNumber'}">Next</span>
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
 
 
 
